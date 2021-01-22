@@ -33,4 +33,4 @@ while not is_winner:
         else:
             print("Ваше число больше загаданного")
 else:
-    print(f"Победил {player}!")
+    print(f"Победил {winner_name}!")
