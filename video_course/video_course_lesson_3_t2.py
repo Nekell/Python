@@ -8,5 +8,5 @@ def get_max(a, b, c):
     return result
 
 
-first_digit, second_digit, third_digit = input("Введите имя, возраст и город проживания через пробел: ").split()
-print(get_max(int(first_digit), int(second_digit), int(third_digit)))
+first_digit, second_digit, third_digit = input("Введите 3 числа: ").split()
+print("Наибольшее из них: ", get_max(int(first_digit), int(second_digit), int(third_digit)))
