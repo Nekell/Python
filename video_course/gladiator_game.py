@@ -4,6 +4,7 @@ import random
 user = dict.fromkeys(['name', 'health', 'damage', 'defense'])
 enemy = dict.fromkeys(['name', 'health', 'damage', 'defense'])
 
+
 # Функция случайно распределяет количество очков на заданное количество раз
 # Первый аргумент - количество очков. Второй аргумент - количество раз
 # Возвращает список распределенных очков
@@ -16,8 +17,9 @@ def generator_point(point, bonus):
             used_point = random.randint(1, point)
             bonus_list[i] = used_point  # Было на 1 таб меньше
             point = point - used_point  # Было на 1 таб меньше
-    bonus_list[bonus-1] = bonus_list[bonus-1] + point
+    bonus_list[bonus - 1] = bonus_list[bonus - 1] + point
     return bonus_list
+
 
 # Функция выводит данные персонажа
 
@@ -29,6 +31,7 @@ def print_characteristi(fighter):
     print(f"Здоровье - {fighter['health']} \n Атака - {fighter['damage']} \n Защита {fighter['defense']} ")
     print('-' * 20)
 
+
 # функция случаного заполения характеристик, от заданного количества отчков.
 # Первый аргумент - участник (словарь), второй параметор - количество очков
 
@@ -39,6 +42,7 @@ def generator_characteristic(fighter, point):
     fighter['health'] = 150 + bonus_list[0]
     fighter['damage'] = 10 + bonus_list[1]
     fighter['defense'] = bonus_list[2]
+
 
 # функция для создания персонажа игрока
 
@@ -70,6 +74,7 @@ def generator_user(fighter, point):
         print_characteristi(fighter)
     print('Отлично, ваш персонаж создан!')
 
+
 # функция возвращает урон с учетом защиты противника
 
 
@@ -77,13 +82,15 @@ def armor(damage, defense):
     if defense == 0:
         return damage
     else:
-        return int(damage / (defense/15))
+        return int(damage / (defense / 15))
+
 
 # функция модифизирует здоровье "defencer" после атаки "attaker"
 
 
 def attack(attacer, defenser):
     defenser['health'] = defenser['health'] - armor(attacer['damage'], defenser['defense'])
+
 
 # Просто проверяет на смерть. True, если здоровье опустится ниже нуля
 
@@ -93,6 +100,7 @@ def death(fighter):
         return False
     else:
         return True
+
 
 # Основная часть программы
 

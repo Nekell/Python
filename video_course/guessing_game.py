@@ -1,7 +1,7 @@
 import random
 
 number = random.randint(1, 100)
-#print(number)
+# print(number)
 player_number = None
 count = 0
 levels = {1: 10, 2: 5, 3: 3}
@@ -10,7 +10,7 @@ max_count = levels[level]
 player_count = int(input("Введите количество игроков: "))
 players = []
 for i in range(player_count):
-    player_nik = input(f"Введите имя {i+1} игрока: ")
+    player_nik = input(f"Введите имя {i + 1} игрока: ")
     players.append(player_nik)
 is_winner = False
 winner_name = None
