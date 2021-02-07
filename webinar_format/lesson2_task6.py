@@ -10,14 +10,14 @@ products = [
     (1, {'название': 'компьютер', 'цена': 20000, 'количество': 5, 'eд': 'шт.'}),
     (2, {'название': 'принтер', 'цена': 6000, 'количество': 2, 'eд': 'шт.'}),
     (3, {'название': 'сканер', 'цена': 2000, 'количество': 7, 'eд': 'шт.'})
-    ]
-list_number = 4
+]
+list_number = len(products) + 1
 analytics = {
     'название': set(),
     'цена': set(),
     'количество': set(),
     'eд': set()
-    }
+}
 
 while True:
     menu = input('add - Добавить продукт\nlist - Посмотреть список товаров'
@@ -30,7 +30,8 @@ while True:
     elif menu == 'add':
         name, price, numbers, measure = input('Введите через пробел название, цену,'
                                               'количество и единицу измерения товара: ').split()
-        products.append((list_number, {'название': name, 'цена': int(price), 'количество': int(numbers), 'eд': measure}))
+        products.append(
+            (list_number, {'название': name, 'цена': int(price), 'количество': int(numbers), 'eд': measure}))
         list_number += 1
     elif menu == 'stat':
         for product in products:
