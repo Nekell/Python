@@ -3,22 +3,22 @@
 Сообщить к какому времени года относится месяц (зима, весна, лето, осень).
 Напишите решения через list и через dict.
 """
-seasons_months_list = ['заглушка', 'зима', 'зима', 'весна', 'весна', 'весна',
-                       'лето', 'лето', 'лето', 'осень', 'осень', 'осень', 'зима']
-seasons_months_dictionary = {
-    1: 'зима',
-    2: 'зима',
-    3: 'весна',
-    4: 'весна',
-    5: 'весна',
-    6: 'лето',
-    7: 'лето',
-    8: 'лето',
-    9: 'осень',
-    10: 'осень',
-    11: 'осень',
-    12: 'зима',
+seasons_months_list = ['stub', 'winter', 'winter', 'spring', 'spring', 'spring',
+                       'summer', 'summer', 'summer', 'autumn', 'autumn', 'autumn', 'winter']
+seasons_months_dict = {
+    1: 'winter',
+    2: 'winter',
+    3: 'spring',
+    4: 'spring',
+    5: 'spring',
+    6: 'summer',
+    7: 'summer',
+    8: 'summer',
+    9: 'autumn',
+    10: 'autumn',
+    11: 'autumn',
+    12: 'winter',
 }
-month = int(input('Введите номер месяца(1-12): '))
-print(f'"{seasons_months_dictionary[month]}"(поиск по славарю)')
-print(f'"{seasons_months_list[month]}"(поиск по списку)')
+month = int(input('Enter the month number(1-12): '))
+print(f'"{seasons_months_dict[month]}"(dictionary search)')
+print(f'"{seasons_months_list[month]}"(list search)')
