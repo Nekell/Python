@@ -13,6 +13,6 @@ def my_func(a: float, b: int):
     return a ** b, 1 / res
 
 
-x = float(input('Введите действительное положительное число: '))
-y = int(input('Введите целое отрицательное число: '))
-print(f'x в степени y равно: {my_func(x, y)}')
+x = float(input('Enter a valid positive number: '))
+y = int(input('Enter a negative integer: '))
+print(f'x to the power of y is: {my_func(x, y)}')
