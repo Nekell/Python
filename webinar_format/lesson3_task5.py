@@ -12,7 +12,7 @@
 def total():
     numbers = []
     while True:
-        string = input('Введите числа через пробел: ')
+        string = input('Enter numbers separated by space: ')
         new_numbers = string.split()
         for digit in new_numbers:
             if digit == 'q':
