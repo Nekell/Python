@@ -11,5 +11,5 @@ def my_func(first: int, second: int, third: int) -> int:
     return sum(numbers)
 
 
-a, b, c = (int(number) for number in input('Введите 3 числа через пробел: ').split())
+a, b, c = (int(number) for number in input('Enter 3 numbers separated by spaces: ').split())
 print(f'Sum of the two largest arguments: {my_func(a, b, c)}')
