@@ -11,6 +11,7 @@ def my_func(a: float, b: int):
     for i in range(abs(b)):
         res *= a
     return a ** b, 1 / res
+    # also we can use pow()
 
 
 x = float(input('Enter a valid positive number: '))
