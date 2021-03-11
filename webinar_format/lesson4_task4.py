@@ -16,7 +16,7 @@ def no_repetitions(some_list):
             yield number
 
 
-input_list = list(map(int, input('Введите числа для списка через пробел: ').split()))
+input_list = list(map(int, input('Enter numbers for the list, separated by a space: ').split()))
 print(input_list)
 new_list = [number for number in no_repetitions(input_list)]
 print(new_list)
