@@ -14,7 +14,7 @@ def numbers_in_order(some_list):
             yield some_list[i]
 
 
-input_list = input('Введите числа для списка через пробел: ').split()
+input_list = input('Enter numbers for the list, separated by a space: ').split()
 input_list = list(map(int, input_list))
 print(input_list)
 new_list = [number for number in numbers_in_order(input_list)]
