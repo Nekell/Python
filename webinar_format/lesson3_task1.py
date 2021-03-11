@@ -12,5 +12,5 @@ def division(a: int, b: int):
         return
 
 
-dividend, divisor = (int(number) for number in input('Введите делимое и делитель через пробел: ').split())
+dividend, divisor = map(int, input('Введите делимое и делитель через пробел: ').split())
 print(division(dividend, divisor))
