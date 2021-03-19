@@ -1,3 +1,11 @@
+"""
+4. Начните работу над проектом «Склад оргтехники».
+Создайте класс, описывающий склад.
+А также класс «Оргтехника», который будет базовым для классов-наследников.
+Эти классы — конкретные типы оргтехники (принтер, сканер, ксерокс).
+В базовом классе определить параметры, общие для приведенных типов.
+В классах-наследниках реализовать параметры, уникальные для каждого типа оргтехники.
+"""
 from abc import ABC
 
 
@@ -8,17 +16,17 @@ class NegativeNumber(Exception):
     @staticmethod
     def chekNumber(number):
         if number < 0:
-           raise NegativeNumber('Действие невозможно! Учет меньше нуля!')
+            raise NegativeNumber('Действие невозможно! Учет меньше нуля!')
 
 
 class Warehouse:
-    office_equi = {}    # 90
-    warehouse_equi= {}  # 10
-    defect = {}     # 9999
+    office_equi = {}  # 90
+    warehouse_equi = {}  # 10
+    defect = {}  # 9999
 
     def __str__(self):
-        return 'Офис' + str(self.office_equi) + '\n'\
-               + 'Склад' + str(self.warehouse_equi) + '\n'\
+        return 'Офис' + str(self.office_equi) + '\n' \
+               + 'Склад' + str(self.warehouse_equi) + '\n' \
                + 'Склад брака' + str(self.defect)
 
     def appequi(self, equipment):
